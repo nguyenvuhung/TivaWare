@@ -1,0 +1,93 @@
+Dependencies for Project 'qs-rgb', Target 'qs-rgb': (DO NOT MODIFY !)
+F (..\drivers\buttons.c)(0x57401E86)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\ -I ..\..\..\third_party\lwip-1.4.1\src\include --c99-I D:\WORK\github\TivaWare\boards\ek-tm4c123gxl\qs-rgb\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="518" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -DUART_BUFFERED-o .\rvmdk\buttons.o --omf_browse .\rvmdk\buttons.crf --depend .\rvmdk\buttons.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55DB3986)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB3990)
+I (..\..\..\inc/hw_types.h)(0x57401E8D)
+I (..\..\..\inc/hw_memmap.h)(0x57401E8D)
+I (..\..\..\inc/hw_gpio.h)(0x57401E8D)
+I (..\..\..\driverlib/sysctl.h)(0x57401E8A)
+I (..\..\..\driverlib/rom.h)(0x57401E8A)
+I (..\..\..\driverlib/rom_map.h)(0x57401E8A)
+I (..\..\..\driverlib/pin_map.h)(0x57401E8A)
+I (..\..\..\driverlib/gpio.h)(0x57401E8A)
+I (..\drivers/buttons.h)(0x57401E86)
+F (.\qs-rgb.c)(0x5740ACD2)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\ -I ..\..\..\third_party\lwip-1.4.1\src\include --c99-I D:\WORK\github\TivaWare\boards\ek-tm4c123gxl\qs-rgb\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="518" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -DUART_BUFFERED-o .\rvmdk\qs-rgb.o --omf_browse .\rvmdk\qs-rgb.crf --depend .\rvmdk\qs-rgb.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB3990)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55DB3986)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x55DB398E)
+I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x55DB3990)
+I (..\..\..\inc/hw_types.h)(0x57401E8D)
+I (..\..\..\inc/hw_memmap.h)(0x57401E8D)
+I (..\..\..\inc/hw_hibernate.h)(0x57401E8D)
+I (..\..\..\driverlib/fpu.h)(0x57401E8A)
+I (..\..\..\driverlib/gpio.h)(0x57401E8A)
+I (..\..\..\driverlib/hibernate.h)(0x57401E8A)
+I (..\..\..\driverlib/interrupt.h)(0x57401E8A)
+I (..\..\..\driverlib/pin_map.h)(0x57401E8A)
+I (..\..\..\driverlib/rom.h)(0x57401E8A)
+I (..\..\..\driverlib/sysctl.h)(0x57401E8A)
+I (..\..\..\driverlib/systick.h)(0x57401E8A)
+I (..\..\..\driverlib/uart.h)(0x57401E8A)
+I (..\..\..\utils/uartstdio.h)(0x57401E97)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x55DB398E)
+I (..\..\..\utils/cmdline.h)(0x57401E97)
+I (..\drivers/rgb.h)(0x57401E86)
+I (..\drivers/buttons.h)(0x57401E86)
+I (rgb_commands.h)(0x57401E87)
+I (qs-rgb.h)(0x57401E87)
+F (..\drivers\rgb.c)(0x57401E86)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\ -I ..\..\..\third_party\lwip-1.4.1\src\include --c99-I D:\WORK\github\TivaWare\boards\ek-tm4c123gxl\qs-rgb\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="518" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -DUART_BUFFERED-o .\rvmdk\rgb.o --omf_browse .\rvmdk\rgb.crf --depend .\rvmdk\rgb.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB3990)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55DB3986)
+I (..\..\..\inc/hw_types.h)(0x57401E8D)
+I (..\..\..\inc/hw_memmap.h)(0x57401E8D)
+I (..\..\..\inc/hw_timer.h)(0x57401E8D)
+I (..\..\..\inc/hw_ints.h)(0x57401E8D)
+I (..\..\..\driverlib/sysctl.h)(0x57401E8A)
+I (..\..\..\driverlib/rom.h)(0x57401E8A)
+I (..\..\..\driverlib/rom_map.h)(0x57401E8A)
+I (..\..\..\driverlib/pin_map.h)(0x57401E8A)
+I (..\..\..\driverlib/timer.h)(0x57401E8A)
+I (..\..\..\driverlib/gpio.h)(0x57401E8A)
+I (..\..\..\driverlib/interrupt.h)(0x57401E8A)
+I (..\drivers\rgb.h)(0x57401E86)
+F (.\rgb_commands.c)(0x57401E87)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\ -I ..\..\..\third_party\lwip-1.4.1\src\include --c99-I D:\WORK\github\TivaWare\boards\ek-tm4c123gxl\qs-rgb\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="518" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -DUART_BUFFERED-o .\rvmdk\rgb_commands.o --omf_browse .\rvmdk\rgb_commands.crf --depend .\rvmdk\rgb_commands.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB3990)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55DB3986)
+I (qs-rgb.h)(0x57401E87)
+I (..\drivers/rgb.h)(0x57401E86)
+I (..\..\..\inc/hw_types.h)(0x57401E8D)
+I (..\..\..\utils/ustdlib.h)(0x57401E97)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x55DB398E)
+I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x55DB3990)
+I (..\..\..\utils/uartstdio.h)(0x57401E97)
+I (..\..\..\utils/cmdline.h)(0x57401E97)
+I (rgb_commands.h)(0x57401E87)
+F (.\startup_rvmdk.S)(0x57401E87)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I D:\WORK\github\TivaWare\boards\ek-tm4c123gxl\qs-rgb\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 518" --pd "_RTE_ SETA 1" --pd "TM4C123GH6PM SETA 1"-o .\rvmdk\startup_rvmdk.o --depend .\rvmdk\startup_rvmdk.d)
+F (..\..\..\utils\cmdline.c)(0x5740A22D)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\ -I ..\..\..\third_party\lwip-1.4.1\src\include --c99-I D:\WORK\github\TivaWare\boards\ek-tm4c123gxl\qs-rgb\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="518" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -DUART_BUFFERED-o .\rvmdk\cmdline_1.o --omf_browse .\rvmdk\cmdline_1.crf --depend .\rvmdk\cmdline_1.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB3990)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55DB3986)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB3988)
+I (..\..\..\utils/cmdline.h)(0x57401E97)
+F (..\..\..\utils\uartstdio.c)(0x57401E97)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\ -I ..\..\..\third_party\lwip-1.4.1\src\include --c99-I D:\WORK\github\TivaWare\boards\ek-tm4c123gxl\qs-rgb\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="518" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -DUART_BUFFERED-o .\rvmdk\uartstdio_1.o --omf_browse .\rvmdk\uartstdio_1.crf --depend .\rvmdk\uartstdio_1.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55DB3986)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB3990)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x55DB398E)
+I (..\..\..\inc/hw_ints.h)(0x57401E8D)
+I (..\..\..\inc/hw_memmap.h)(0x57401E8D)
+I (..\..\..\inc/hw_types.h)(0x57401E8D)
+I (..\..\..\inc/hw_uart.h)(0x57401E8D)
+I (..\..\..\driverlib/debug.h)(0x57401E8A)
+I (..\..\..\driverlib/interrupt.h)(0x57401E8A)
+I (..\..\..\driverlib/rom.h)(0x57401E8A)
+I (..\..\..\driverlib/rom_map.h)(0x57401E8A)
+I (..\..\..\driverlib/sysctl.h)(0x57401E8A)
+I (..\..\..\driverlib/uart.h)(0x57401E8A)
+I (..\..\..\utils/uartstdio.h)(0x57401E97)
+F (..\..\..\utils\ustdlib.c)(0x57401E97)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .. -I ..\..\..\ -I ..\..\..\third_party\lwip-1.4.1\src\include --c99-I D:\WORK\github\TivaWare\boards\ek-tm4c123gxl\qs-rgb\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="518" -D_RTE_ -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1 -DUART_BUFFERED-o .\rvmdk\ustdlib_1.o --omf_browse .\rvmdk\ustdlib_1.crf --depend .\rvmdk\ustdlib_1.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB3990)
+I (..\..\..\driverlib/debug.h)(0x57401E8A)
+I (..\..\..\utils/ustdlib.h)(0x57401E97)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x55DB398E)
+I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x55DB3990)
+F (..\..\..\driverlib\rvmdk\driverlib.lib)(0x5740A0CB)()
+F (.\readme.txt)(0x57401E87)()

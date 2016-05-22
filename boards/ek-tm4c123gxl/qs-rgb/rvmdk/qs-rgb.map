@@ -1,0 +1,938 @@
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
+
+==============================================================================
+
+Section Cross References
+
+    buttons.o(i.ButtonsInit) refers to buttons.o(.data) for .data
+    buttons.o(i.ButtonsPoll) refers to buttons.o(.data) for .data
+    qs-rgb.o(i.AppButtonHandler) refers to qs-rgb.o(.data) for .data
+    qs-rgb.o(i.AppButtonHandler) refers to qs-rgb.o(.bss) for .bss
+    qs-rgb.o(i.AppHibernateEnter) refers to uartstdio_1.o(i.UARTprintf) for UARTprintf
+    qs-rgb.o(i.AppHibernateEnter) refers to hibernate.o(i.HibernateGPIORetentionEnable) for HibernateGPIORetentionEnable
+    qs-rgb.o(i.AppHibernateEnter) refers to hibernate.o(i.HibernateRTCSet) for HibernateRTCSet
+    qs-rgb.o(i.AppHibernateEnter) refers to hibernate.o(i.HibernateRTCEnable) for HibernateRTCEnable
+    qs-rgb.o(i.AppHibernateEnter) refers to hibernate.o(i.HibernateRTCMatchSet) for HibernateRTCMatchSet
+    qs-rgb.o(i.AppHibernateEnter) refers to hibernate.o(i.HibernateWakeSet) for HibernateWakeSet
+    qs-rgb.o(i.AppHibernateEnter) refers to hibernate.o(i.HibernateDataSet) for HibernateDataSet
+    qs-rgb.o(i.AppHibernateEnter) refers to rgb.o(i.RGBDisable) for RGBDisable
+    qs-rgb.o(i.AppHibernateEnter) refers to sysctl.o(i.SysCtlClockGet) for SysCtlClockGet
+    qs-rgb.o(i.AppHibernateEnter) refers to sysctl.o(.emb_text) for SysCtlDelay
+    qs-rgb.o(i.AppHibernateEnter) refers to rgb.o(i.RGBEnable) for RGBEnable
+    qs-rgb.o(i.AppHibernateEnter) refers to hibernate.o(i.HibernateRequest) for HibernateRequest
+    qs-rgb.o(i.AppHibernateEnter) refers to qs-rgb.o(.bss) for .bss
+    qs-rgb.o(i.AppRainbow) refers to sinf.o(i.__hardfp_sinf) for __hardfp_sinf
+    qs-rgb.o(i.AppRainbow) refers to rgb.o(i.RGBColorSet) for RGBColorSet
+    qs-rgb.o(i.AppRainbow) refers to qs-rgb.o(.bss) for .bss
+    qs-rgb.o(i.AppRainbow) refers to qs-rgb.o(.data) for .data
+    qs-rgb.o(i.ConfigureUART) refers to uart.o(i.UARTClockSourceSet) for UARTClockSourceSet
+    qs-rgb.o(i.ConfigureUART) refers to uartstdio_1.o(i.UARTStdioConfig) for UARTStdioConfig
+    qs-rgb.o(i.SysTickIntHandler) refers to buttons.o(i.ButtonsPoll) for ButtonsPoll
+    qs-rgb.o(i.SysTickIntHandler) refers to qs-rgb.o(i.AppButtonHandler) for AppButtonHandler
+    qs-rgb.o(i.SysTickIntHandler) refers to qs-rgb.o(i.AppRainbow) for AppRainbow
+    qs-rgb.o(i.SysTickIntHandler) refers to qs-rgb.o(.bss) for .bss
+    qs-rgb.o(i.SysTickIntHandler) refers to qs-rgb.o(.data) for .data
+    qs-rgb.o(i.main) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    qs-rgb.o(i.main) refers to qs-rgb.o(i.ConfigureUART) for ConfigureUART
+    qs-rgb.o(i.main) refers to uartstdio_1.o(i.UARTprintf) for UARTprintf
+    qs-rgb.o(i.main) refers to sysctl.o(i.SysCtlResetCauseGet) for SysCtlResetCauseGet
+    qs-rgb.o(i.main) refers to sysctl.o(i.SysCtlResetCauseClear) for SysCtlResetCauseClear
+    qs-rgb.o(i.main) refers to hibernate.o(i.HibernateIsActive) for HibernateIsActive
+    qs-rgb.o(i.main) refers to hibernate.o(i.HibernateIntStatus) for HibernateIntStatus
+    qs-rgb.o(i.main) refers to hibernate.o(i.HibernateIntClear) for HibernateIntClear
+    qs-rgb.o(i.main) refers to hibernate.o(i.HibernateDataGet) for HibernateDataGet
+    qs-rgb.o(i.main) refers to sysctl.o(i.SysCtlClockGet) for SysCtlClockGet
+    qs-rgb.o(i.main) refers to hibernate.o(i.HibernateEnableExpClk) for HibernateEnableExpClk
+    qs-rgb.o(i.main) refers to rgb.o(i.RGBInit) for RGBInit
+    qs-rgb.o(i.main) refers to rgb.o(i.RGBIntensitySet) for RGBIntensitySet
+    qs-rgb.o(i.main) refers to qs-rgb.o(i.AppRainbow) for AppRainbow
+    qs-rgb.o(i.main) refers to rgb.o(i.RGBEnable) for RGBEnable
+    qs-rgb.o(i.main) refers to buttons.o(i.ButtonsInit) for ButtonsInit
+    qs-rgb.o(i.main) refers to systick.o(i.SysTickPeriodSet) for SysTickPeriodSet
+    qs-rgb.o(i.main) refers to systick.o(i.SysTickEnable) for SysTickEnable
+    qs-rgb.o(i.main) refers to systick.o(i.SysTickIntEnable) for SysTickIntEnable
+    qs-rgb.o(i.main) refers to interrupt.o(i.IntMasterEnable) for IntMasterEnable
+    qs-rgb.o(i.main) refers to sysctl.o(.emb_text) for SysCtlDelay
+    qs-rgb.o(i.main) refers to qs-rgb.o(i.AppHibernateEnter) for AppHibernateEnter
+    qs-rgb.o(i.main) refers to uartstdio_1.o(i.UARTPeek) for UARTPeek
+    qs-rgb.o(i.main) refers to uartstdio_1.o(i.UARTgets) for UARTgets
+    qs-rgb.o(i.main) refers to cmdline_1.o(i.CmdLineProcess) for CmdLineProcess
+    qs-rgb.o(i.main) refers to qs-rgb.o(.bss) for .bss
+    rgb.o(i.RGBBlinkIntHandler) refers to rgb.o(i.RGBEnable) for RGBEnable
+    rgb.o(i.RGBBlinkIntHandler) refers to rgb.o(i.RGBDisable) for RGBDisable
+    rgb.o(i.RGBBlinkIntHandler) refers to rgb.o(.data) for .data
+    rgb.o(i.RGBBlinkRateSet) refers to rgb.o(i.RGBEnable) for RGBEnable
+    rgb.o(i.RGBBlinkRateSet) refers to sysctl.o(i.SysCtlClockGet) for SysCtlClockGet
+    rgb.o(i.RGBBlinkRateSet) refers to ffixul.o(.text) for __aeabi_f2ulz
+    rgb.o(i.RGBColorGet) refers to rgb.o(.bss) for .bss
+    rgb.o(i.RGBColorSet) refers to rgb.o(.bss) for .bss
+    rgb.o(i.RGBColorSet) refers to rgb.o(.data) for .data
+    rgb.o(i.RGBInit) refers to rgb.o(i.RGBEnable) for RGBEnable
+    rgb.o(i.RGBIntensitySet) refers to rgb.o(i.RGBColorSet) for RGBColorSet
+    rgb.o(i.RGBIntensitySet) refers to rgb.o(.data) for .data
+    rgb.o(i.RGBIntensitySet) refers to rgb.o(.bss) for .bss
+    rgb.o(i.RGBSet) refers to rgb.o(i.RGBColorSet) for RGBColorSet
+    rgb.o(i.RGBSet) refers to rgb.o(i.RGBIntensitySet) for RGBIntensitySet
+    rgb_commands.o(i.CMD_help) refers to uartstdio_1.o(i.UARTprintf) for UARTprintf
+    rgb_commands.o(i.CMD_help) refers to rgb_commands.o(.data) for .data
+    rgb_commands.o(i.CMD_hib) refers to qs-rgb.o(i.AppHibernateEnter) for AppHibernateEnter
+    rgb_commands.o(i.CMD_intensity) refers to ustdlib_1.o(i.ustrtoul) for ustrtoul
+    rgb_commands.o(i.CMD_intensity) refers to rgb.o(i.RGBIntensitySet) for RGBIntensitySet
+    rgb_commands.o(i.CMD_intensity) refers to qs-rgb.o(.bss) for g_sAppState
+    rgb_commands.o(i.CMD_rand) refers to qs-rgb.o(.bss) for g_sAppState
+    rgb_commands.o(i.CMD_rgb) refers to ustdlib_1.o(i.ustrtoul) for ustrtoul
+    rgb_commands.o(i.CMD_rgb) refers to rgb.o(i.RGBColorSet) for RGBColorSet
+    rgb_commands.o(i.CMD_rgb) refers to qs-rgb.o(.bss) for g_sAppState
+    rgb_commands.o(.data) refers to rgb_commands.o(.conststring) for .conststring
+    rgb_commands.o(.data) refers to rgb_commands.o(i.CMD_help) for CMD_help
+    rgb_commands.o(.data) refers to rgb_commands.o(i.CMD_hib) for CMD_hib
+    rgb_commands.o(.data) refers to rgb_commands.o(i.CMD_rand) for CMD_rand
+    rgb_commands.o(.data) refers to rgb_commands.o(i.CMD_intensity) for CMD_intensity
+    rgb_commands.o(.data) refers to rgb_commands.o(i.CMD_rgb) for CMD_rgb
+    startup_rvmdk.o(RESET) refers to startup_rvmdk.o(STACK) for StackMem
+    startup_rvmdk.o(RESET) refers to qs-rgb.o(i.SysTickIntHandler) for SysTickIntHandler
+    startup_rvmdk.o(RESET) refers to uartstdio_1.o(i.UARTStdioIntHandler) for UARTStdioIntHandler
+    startup_rvmdk.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    cmdline_1.o(i.CmdLineProcess) refers to strcmp.o(.text) for strcmp
+    cmdline_1.o(i.CmdLineProcess) refers to cmdline_1.o(.bss) for .bss
+    cmdline_1.o(i.CmdLineProcess) refers to rgb_commands.o(.data) for g_psCmdTable
+    uartstdio_1.o(i.UARTEchoSet) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTFlushRx) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTFlushTx) refers to uartstdio_1.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio_1.o(i.UARTFlushTx) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTPeek) refers to uartstdio_1.o(i.GetBufferCount) for GetBufferCount
+    uartstdio_1.o(i.UARTPeek) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTPeek) refers to uartstdio_1.o(.bss) for .bss
+    uartstdio_1.o(i.UARTPrimeTransmit) refers to uartstdio_1.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio_1.o(i.UARTPrimeTransmit) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTPrimeTransmit) refers to uartstdio_1.o(.constdata) for .constdata
+    uartstdio_1.o(i.UARTPrimeTransmit) refers to uartstdio_1.o(.bss) for .bss
+    uartstdio_1.o(i.UARTRxBytesAvail) refers to uartstdio_1.o(i.GetBufferCount) for GetBufferCount
+    uartstdio_1.o(i.UARTRxBytesAvail) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTStdioConfig) refers to uartstdio_1.o(i.UARTFlushRx) for UARTFlushRx
+    uartstdio_1.o(i.UARTStdioConfig) refers to uartstdio_1.o(i.UARTFlushTx) for UARTFlushTx
+    uartstdio_1.o(i.UARTStdioConfig) refers to uartstdio_1.o(.constdata) for .constdata
+    uartstdio_1.o(i.UARTStdioConfig) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTStdioIntHandler) refers to uartstdio_1.o(i.UARTPrimeTransmit) for UARTPrimeTransmit
+    uartstdio_1.o(i.UARTStdioIntHandler) refers to uartstdio_1.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio_1.o(i.UARTStdioIntHandler) refers to uartstdio_1.o(i.UARTwrite) for UARTwrite
+    uartstdio_1.o(i.UARTStdioIntHandler) refers to uartstdio_1.o(i.IsBufferFull) for IsBufferFull
+    uartstdio_1.o(i.UARTStdioIntHandler) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTStdioIntHandler) refers to uartstdio_1.o(.bss) for .bss
+    uartstdio_1.o(i.UARTTxBytesFree) refers to uartstdio_1.o(i.GetBufferCount) for GetBufferCount
+    uartstdio_1.o(i.UARTTxBytesFree) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTgetc) refers to uartstdio_1.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio_1.o(i.UARTgetc) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTgetc) refers to uartstdio_1.o(.bss) for .bss
+    uartstdio_1.o(i.UARTgets) refers to uartstdio_1.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio_1.o(i.UARTgets) refers to uartstdio_1.o(.bss) for .bss
+    uartstdio_1.o(i.UARTgets) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(i.UARTprintf) refers to uartstdio_1.o(i.UARTvprintf) for UARTvprintf
+    uartstdio_1.o(i.UARTvprintf) refers to uartstdio_1.o(i.UARTwrite) for UARTwrite
+    uartstdio_1.o(i.UARTvprintf) refers to uartstdio_1.o(.constdata) for .constdata
+    uartstdio_1.o(i.UARTwrite) refers to uartstdio_1.o(i.IsBufferFull) for IsBufferFull
+    uartstdio_1.o(i.UARTwrite) refers to uartstdio_1.o(i.IsBufferEmpty) for IsBufferEmpty
+    uartstdio_1.o(i.UARTwrite) refers to uartstdio_1.o(i.UARTPrimeTransmit) for UARTPrimeTransmit
+    uartstdio_1.o(i.UARTwrite) refers to uartstdio_1.o(.bss) for .bss
+    uartstdio_1.o(i.UARTwrite) refers to uartstdio_1.o(.data) for .data
+    uartstdio_1.o(.constdata) refers to uartstdio_1.o(.conststring) for .conststring
+    ustdlib_1.o(i.ulocaltime) refers to ustdlib_1.o(.constdata) for .constdata
+    ustdlib_1.o(i.umktime) refers to ustdlib_1.o(i.ulocaltime) for ulocaltime
+    ustdlib_1.o(i.umktime) refers to ustdlib_1.o(i.ucmptime) for ucmptime
+    ustdlib_1.o(i.urand) refers to ustdlib_1.o(.data) for .data
+    ustdlib_1.o(i.usnprintf) refers to ustdlib_1.o(i.uvsnprintf) for uvsnprintf
+    ustdlib_1.o(i.usprintf) refers to ustdlib_1.o(i.uvsnprintf) for uvsnprintf
+    ustdlib_1.o(i.usrand) refers to ustdlib_1.o(.data) for .data
+    ustdlib_1.o(i.ustrcasecmp) refers to ustdlib_1.o(i.ustrncasecmp) for ustrncasecmp
+    ustdlib_1.o(i.ustrcmp) refers to ustdlib_1.o(i.ustrncmp) for ustrncmp
+    ustdlib_1.o(i.ustrstr) refers to ustdlib_1.o(i.ustrlen) for ustrlen
+    ustdlib_1.o(i.ustrstr) refers to ustdlib_1.o(i.ustrncmp) for ustrncmp
+    ustdlib_1.o(i.ustrtof) refers to ustdlib_1.o(.constdata) for .constdata
+    ustdlib_1.o(i.uvsnprintf) refers to ustdlib_1.o(i.ustrncpy) for ustrncpy
+    ustdlib_1.o(i.uvsnprintf) refers to ustdlib_1.o(.constdata) for .constdata
+    ustdlib_1.o(.constdata) refers to ustdlib_1.o(.conststring) for .conststring
+    hibernate.o(i.HibernateCalendarMatchSet) refers to hibernate.o(i._HibernateCalendarSet) for _HibernateCalendarSet
+    hibernate.o(i.HibernateCalendarSet) refers to hibernate.o(i._HibernateCalendarSet) for _HibernateCalendarSet
+    hibernate.o(i.HibernateIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    hibernate.o(i.HibernateIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    hibernate.o(i.HibernateIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    hibernate.o(i.HibernateIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    interrupt.o(i.IntDisable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntEnable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntIsEnabled) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntMasterDisable) refers to cpu.o(.emb_text) for CPUcpsid
+    interrupt.o(i.IntMasterEnable) refers to cpu.o(.emb_text) for CPUcpsie
+    interrupt.o(i.IntPendClear) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPendSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityMaskGet) refers to cpu.o(.emb_text) for CPUbasepriGet
+    interrupt.o(i.IntPriorityMaskSet) refers to cpu.o(.emb_text) for CPUbasepriSet
+    interrupt.o(i.IntPrioritySet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntRegister) refers to interrupt.o(vtable) for vtable
+    interrupt.o(i.IntUnregister) refers to interrupt.o(i._IntDefaultHandler) for _IntDefaultHandler
+    interrupt.o(i.IntUnregister) refers to interrupt.o(vtable) for vtable
+    sysctl.o(i.SysCtlClockFreqSet) refers to sysctl.o(.constdata) for .constdata
+    sysctl.o(i.SysCtlClockGet) refers to sysctl.o(.constdata) for .constdata
+    sysctl.o(i.SysCtlClockSet) refers to sysctl.o(.emb_text) for SysCtlDelay
+    sysctl.o(i.SysCtlDeepSleep) refers to cpu.o(.emb_text) for CPUwfi
+    sysctl.o(i.SysCtlIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    sysctl.o(i.SysCtlIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    sysctl.o(i.SysCtlIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    sysctl.o(i.SysCtlIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    sysctl.o(i.SysCtlSleep) refers to cpu.o(.emb_text) for CPUwfi
+    systick.o(i.SysTickIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    systick.o(i.SysTickIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    uart.o(i.UARTIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    uart.o(i.UARTIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    uart.o(i.UARTIntRegister) refers to uart.o(.constdata) for .constdata
+    uart.o(i.UARTIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    uart.o(i.UARTIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    uart.o(i.UARTIntUnregister) refers to uart.o(.constdata) for .constdata
+    sinf.o(i.__hardfp_sinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf.o(i.__hardfp_sinf) refers to rredf.o(i.__mathlib_rredf2) for __mathlib_rredf2
+    sinf.o(i.__hardfp_sinf) refers to fpclassifyf.o(i.__ARM_fpclassifyf) for __ARM_fpclassifyf
+    sinf.o(i.__hardfp_sinf) refers to funder.o(i.__mathlib_flt_underflow) for __mathlib_flt_underflow
+    sinf.o(i.__hardfp_sinf) refers to errno.o(i.__set_errno) for __set_errno
+    sinf.o(i.__hardfp_sinf) refers to funder.o(i.__mathlib_flt_invalid) for __mathlib_flt_invalid
+    sinf.o(i.__hardfp_sinf) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    sinf.o(i.__softfp_sinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf.o(i.__softfp_sinf) refers to sinf.o(i.__hardfp_sinf) for __hardfp_sinf
+    sinf.o(i.sinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf.o(i.sinf) refers to sinf.o(i.__hardfp_sinf) for __hardfp_sinf
+    sinf_x.o(i.____hardfp_sinf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf_x.o(i.____hardfp_sinf$lsc) refers to rredf.o(i.__mathlib_rredf2) for __mathlib_rredf2
+    sinf_x.o(i.____hardfp_sinf$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sinf_x.o(i.____hardfp_sinf$lsc) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    sinf_x.o(i.____softfp_sinf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf_x.o(i.____softfp_sinf$lsc) refers to sinf_x.o(i.____hardfp_sinf$lsc) for ____hardfp_sinf$lsc
+    sinf_x.o(i.__sinf$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf_x.o(i.__sinf$lsc) refers to sinf_x.o(i.____hardfp_sinf$lsc) for ____hardfp_sinf$lsc
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    ffixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ffixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    fpclassifyf.o(i.__ARM_fpclassifyf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rredf.o(i.__mathlib_rredf2) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rredf.o(i.__mathlib_rredf2) refers to rredf.o(.constdata) for .constdata
+    rredf.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to qs-rgb.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to qs-rgb.o(i.main) for main
+    errno.o(i.__aeabi_errno_addr) refers to errno.o(.data) for .data
+    errno.o(i.__read_errno) refers to errno.o(.data) for .data
+    errno.o(i.__set_errno) refers to errno.o(.data) for .data
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing rgb.o(i.RGBBlinkIntHandler), (56 bytes).
+    Removing rgb.o(i.RGBBlinkRateSet), (120 bytes).
+    Removing rgb.o(i.RGBColorGet), (24 bytes).
+    Removing rgb.o(i.RGBSet), (30 bytes).
+    Removing startup_rvmdk.o(HEAP), (0 bytes).
+    Removing startup_rvmdk.o(.text), (0 bytes).
+    Removing uartstdio_1.o(i.UARTEchoSet), (16 bytes).
+    Removing uartstdio_1.o(i.UARTRxBytesAvail), (16 bytes).
+    Removing uartstdio_1.o(i.UARTTxBytesFree), (24 bytes).
+    Removing uartstdio_1.o(i.UARTgetc), (44 bytes).
+    Removing ustdlib_1.o(i.ucmptime), (82 bytes).
+    Removing ustdlib_1.o(i.ulocaltime), (164 bytes).
+    Removing ustdlib_1.o(i.umktime), (58 bytes).
+    Removing ustdlib_1.o(i.urand), (28 bytes).
+    Removing ustdlib_1.o(i.usnprintf), (18 bytes).
+    Removing ustdlib_1.o(i.usprintf), (22 bytes).
+    Removing ustdlib_1.o(i.usrand), (12 bytes).
+    Removing ustdlib_1.o(i.ustrcasecmp), (8 bytes).
+    Removing ustdlib_1.o(i.ustrcmp), (8 bytes).
+    Removing ustdlib_1.o(i.ustrlen), (16 bytes).
+    Removing ustdlib_1.o(i.ustrncasecmp), (70 bytes).
+    Removing ustdlib_1.o(i.ustrncmp), (46 bytes).
+    Removing ustdlib_1.o(i.ustrncpy), (36 bytes).
+    Removing ustdlib_1.o(i.ustrstr), (42 bytes).
+    Removing ustdlib_1.o(i.ustrtof), (316 bytes).
+    Removing ustdlib_1.o(i.uvsnprintf), (592 bytes).
+    Removing ustdlib_1.o(.constdata), (76 bytes).
+    Removing ustdlib_1.o(.conststring), (17 bytes).
+    Removing ustdlib_1.o(.data), (4 bytes).
+    Removing hibernate.o(i.HibernateBatCheckDone), (16 bytes).
+    Removing hibernate.o(i.HibernateBatCheckStart), (24 bytes).
+    Removing hibernate.o(i.HibernateCalendarGet), (120 bytes).
+    Removing hibernate.o(i.HibernateCalendarMatchGet), (120 bytes).
+    Removing hibernate.o(i.HibernateCalendarMatchSet), (12 bytes).
+    Removing hibernate.o(i.HibernateCalendarSet), (12 bytes).
+    Removing hibernate.o(i.HibernateClockConfig), (80 bytes).
+    Removing hibernate.o(i.HibernateCounterMode), (20 bytes).
+    Removing hibernate.o(i.HibernateDisable), (24 bytes).
+    Removing hibernate.o(i.HibernateGPIORetentionDisable), (28 bytes).
+    Removing hibernate.o(i.HibernateGPIORetentionGet), (28 bytes).
+    Removing hibernate.o(i.HibernateIntDisable), (24 bytes).
+    Removing hibernate.o(i.HibernateIntEnable), (24 bytes).
+    Removing hibernate.o(i.HibernateIntRegister), (52 bytes).
+    Removing hibernate.o(i.HibernateIntUnregister), (48 bytes).
+    Removing hibernate.o(i.HibernateLowBatGet), (16 bytes).
+    Removing hibernate.o(i.HibernateLowBatSet), (32 bytes).
+    Removing hibernate.o(i.HibernateRTCDisable), (24 bytes).
+    Removing hibernate.o(i.HibernateRTCGet), (12 bytes).
+    Removing hibernate.o(i.HibernateRTCMatchGet), (12 bytes).
+    Removing hibernate.o(i.HibernateRTCSSGet), (16 bytes).
+    Removing hibernate.o(i.HibernateRTCSSMatchGet), (12 bytes).
+    Removing hibernate.o(i.HibernateRTCSSMatchSet), (20 bytes).
+    Removing hibernate.o(i.HibernateRTCTrimGet), (12 bytes).
+    Removing hibernate.o(i.HibernateRTCTrimSet), (20 bytes).
+    Removing hibernate.o(i.HibernateTamperDisable), (64 bytes).
+    Removing hibernate.o(i.HibernateTamperEnable), (64 bytes).
+    Removing hibernate.o(i.HibernateTamperEventsClear), (64 bytes).
+    Removing hibernate.o(i.HibernateTamperEventsClearNoLock), (32 bytes).
+    Removing hibernate.o(i.HibernateTamperEventsConfig), (72 bytes).
+    Removing hibernate.o(i.HibernateTamperEventsGet), (84 bytes).
+    Removing hibernate.o(i.HibernateTamperExtOscRecover), (64 bytes).
+    Removing hibernate.o(i.HibernateTamperExtOscValid), (60 bytes).
+    Removing hibernate.o(i.HibernateTamperIODisable), (72 bytes).
+    Removing hibernate.o(i.HibernateTamperIOEnable), (88 bytes).
+    Removing hibernate.o(i.HibernateTamperLock), (32 bytes).
+    Removing hibernate.o(i.HibernateTamperStatusGet), (52 bytes).
+    Removing hibernate.o(i.HibernateTamperUnLock), (28 bytes).
+    Removing hibernate.o(i.HibernateWakeGet), (56 bytes).
+    Removing hibernate.o(i._HibernateCalendarSet), (268 bytes).
+    Removing interrupt.o(i.IntDisable), (100 bytes).
+    Removing interrupt.o(i.IntEnable), (100 bytes).
+    Removing interrupt.o(i.IntIsEnabled), (96 bytes).
+    Removing interrupt.o(i.IntMasterDisable), (14 bytes).
+    Removing interrupt.o(i.IntPendClear), (68 bytes).
+    Removing interrupt.o(i.IntPendSet), (84 bytes).
+    Removing interrupt.o(i.IntPriorityGet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingGet), (36 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingSet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityMaskGet), (4 bytes).
+    Removing interrupt.o(i.IntPriorityMaskSet), (4 bytes).
+    Removing interrupt.o(i.IntPrioritySet), (40 bytes).
+    Removing interrupt.o(i.IntRegister), (52 bytes).
+    Removing interrupt.o(i.IntTrigger), (12 bytes).
+    Removing interrupt.o(i.IntUnregister), (20 bytes).
+    Removing interrupt.o(i._IntDefaultHandler), (2 bytes).
+    Removing interrupt.o(.constdata), (268 bytes).
+    Removing interrupt.o(vtable), (620 bytes).
+    Removing sysctl.o(i.SysCtlAltClkConfig), (12 bytes).
+    Removing sysctl.o(i.SysCtlClockFreqSet), (712 bytes).
+    Removing sysctl.o(i.SysCtlClockOutConfig), (20 bytes).
+    Removing sysctl.o(i.SysCtlClockSet), (288 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleep), (32 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepClockConfigSet), (112 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepClockSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepPowerSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlFlashSectorSizeGet), (56 bytes).
+    Removing sysctl.o(i.SysCtlFlashSizeGet), (56 bytes).
+    Removing sysctl.o(i.SysCtlGPIOAHBDisable), (28 bytes).
+    Removing sysctl.o(i.SysCtlGPIOAHBEnable), (24 bytes).
+    Removing sysctl.o(i.SysCtlIntClear), (12 bytes).
+    Removing sysctl.o(i.SysCtlIntDisable), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntEnable), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntRegister), (20 bytes).
+    Removing sysctl.o(i.SysCtlIntStatus), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntUnregister), (18 bytes).
+    Removing sysctl.o(i.SysCtlLDODeepSleepGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDODeepSleepSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDOSleepGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDOSleepSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlMOSCConfigSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlNMIClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlNMIStatus), (12 bytes).
+    Removing sysctl.o(i.SysCtlPIOSCCalibrate), (76 bytes).
+    Removing sysctl.o(i.SysCtlPWMClockGet), (24 bytes).
+    Removing sysctl.o(i.SysCtlPWMClockSet), (20 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralClockGating), (68 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDeepSleepDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDeepSleepEnable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPowerOff), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPowerOn), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPresent), (44 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralReady), (44 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralReset), (60 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralSleepDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralSleepEnable), (40 bytes).
+    Removing sysctl.o(i.SysCtlReset), (16 bytes).
+    Removing sysctl.o(i.SysCtlResetBehaviorGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlResetBehaviorSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlSRAMSizeGet), (16 bytes).
+    Removing sysctl.o(i.SysCtlSleep), (4 bytes).
+    Removing sysctl.o(i.SysCtlSleepPowerSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlUSBPLLDisable), (16 bytes).
+    Removing sysctl.o(i.SysCtlUSBPLLEnable), (16 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventConfig), (12 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventStatus), (12 bytes).
+    Removing systick.o(i.SysTickDisable), (14 bytes).
+    Removing systick.o(i.SysTickIntDisable), (14 bytes).
+    Removing systick.o(i.SysTickIntRegister), (24 bytes).
+    Removing systick.o(i.SysTickIntUnregister), (18 bytes).
+    Removing systick.o(i.SysTickPeriodGet), (10 bytes).
+    Removing systick.o(i.SysTickValueGet), (8 bytes).
+    Removing uart.o(i.UART9BitAddrSend), (38 bytes).
+    Removing uart.o(i.UART9BitAddrSet), (10 bytes).
+    Removing uart.o(i.UART9BitDisable), (14 bytes).
+    Removing uart.o(i.UART9BitEnable), (14 bytes).
+    Removing uart.o(i.UARTBreakCtl), (18 bytes).
+    Removing uart.o(i.UARTBusy), (8 bytes).
+    Removing uart.o(i.UARTCharGet), (12 bytes).
+    Removing uart.o(i.UARTCharGetNonBlocking), (16 bytes).
+    Removing uart.o(i.UARTCharPut), (12 bytes).
+    Removing uart.o(i.UARTCharPutNonBlocking), (16 bytes).
+    Removing uart.o(i.UARTCharsAvail), (10 bytes).
+    Removing uart.o(i.UARTClockSourceGet), (6 bytes).
+    Removing uart.o(i.UARTConfigGetExpClk), (46 bytes).
+    Removing uart.o(i.UARTConfigSetExpClk), (110 bytes).
+    Removing uart.o(i.UARTDMADisable), (10 bytes).
+    Removing uart.o(i.UARTDMAEnable), (8 bytes).
+    Removing uart.o(i.UARTDisable), (30 bytes).
+    Removing uart.o(i.UARTDisableSIR), (10 bytes).
+    Removing uart.o(i.UARTEnable), (20 bytes).
+    Removing uart.o(i.UARTEnableSIR), (18 bytes).
+    Removing uart.o(i.UARTFIFODisable), (10 bytes).
+    Removing uart.o(i.UARTFIFOEnable), (10 bytes).
+    Removing uart.o(i.UARTFIFOLevelGet), (16 bytes).
+    Removing uart.o(i.UARTFIFOLevelSet), (6 bytes).
+    Removing uart.o(i.UARTFlowControlGet), (8 bytes).
+    Removing uart.o(i.UARTFlowControlSet), (12 bytes).
+    Removing uart.o(i.UARTIntClear), (4 bytes).
+    Removing uart.o(i.UARTIntDisable), (10 bytes).
+    Removing uart.o(i.UARTIntEnable), (8 bytes).
+    Removing uart.o(i.UARTIntRegister), (88 bytes).
+    Removing uart.o(i.UARTIntStatus), (10 bytes).
+    Removing uart.o(i.UARTIntUnregister), (88 bytes).
+    Removing uart.o(i.UARTModemControlClear), (14 bytes).
+    Removing uart.o(i.UARTModemControlGet), (8 bytes).
+    Removing uart.o(i.UARTModemControlSet), (12 bytes).
+    Removing uart.o(i.UARTModemStatusGet), (10 bytes).
+    Removing uart.o(i.UARTParityModeGet), (8 bytes).
+    Removing uart.o(i.UARTParityModeSet), (12 bytes).
+    Removing uart.o(i.UARTRxErrorClear), (6 bytes).
+    Removing uart.o(i.UARTRxErrorGet), (8 bytes).
+    Removing uart.o(i.UARTSmartCardDisable), (10 bytes).
+    Removing uart.o(i.UARTSmartCardEnable), (22 bytes).
+    Removing uart.o(i.UARTSpaceAvail), (10 bytes).
+    Removing uart.o(i.UARTTxIntModeGet), (8 bytes).
+    Removing uart.o(i.UARTTxIntModeSet), (12 bytes).
+    Removing uart.o(.constdata), (128 bytes).
+    Removing ffixul.o(.text), (44 bytes).
+
+190 unused section(s) (total 8835 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      648  startup_rvmdk.o(RESET)
+    ../clib/microlib/errno.c                 0x00000000   Number         0  errno.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/string/strcmp.c         0x00000000   Number         0  strcmp.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixul.o ABSOLUTE
+    ../mathlib/fpclassifyf.c                 0x00000000   Number         0  fpclassifyf.o ABSOLUTE
+    ../mathlib/funder.c                      0x00000000   Number         0  funder.o ABSOLUTE
+    ../mathlib/rredf.c                       0x00000000   Number         0  rredf.o ABSOLUTE
+    ../mathlib/sinf.c                        0x00000000   Number         0  sinf_x.o ABSOLUTE
+    ../mathlib/sinf.c                        0x00000000   Number         0  sinf.o ABSOLUTE
+    ..\..\..\utils\cmdline.c                 0x00000000   Number         0  cmdline_1.o ABSOLUTE
+    ..\..\..\utils\uartstdio.c               0x00000000   Number         0  uartstdio_1.o ABSOLUTE
+    ..\..\..\utils\ustdlib.c                 0x00000000   Number         0  ustdlib_1.o ABSOLUTE
+    ..\drivers\buttons.c                     0x00000000   Number         0  buttons.o ABSOLUTE
+    ..\drivers\rgb.c                         0x00000000   Number         0  rgb.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    hibernate.c                              0x00000000   Number         0  hibernate.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    interrupt.c                              0x00000000   Number         0  interrupt.o ABSOLUTE
+    qs-rgb.c                                 0x00000000   Number         0  qs-rgb.o ABSOLUTE
+    rgb_commands.c                           0x00000000   Number         0  rgb_commands.o ABSOLUTE
+    startup_rvmdk.S                          0x00000000   Number         0  startup_rvmdk.o ABSOLUTE
+    sysctl.c                                 0x00000000   Number         0  sysctl.o ABSOLUTE
+    sysctl.c                                 0x00000000   Number         0  sysctl.o ABSOLUTE
+    systick.c                                0x00000000   Number         0  systick.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
+    $v0                                      0x0000026c   Number         0  startup_rvmdk.o(RESET)
+    NmiSR                                    0x00000281   Thumb Code     0  startup_rvmdk.o(RESET)
+    FaultISR                                 0x00000283   Thumb Code     0  startup_rvmdk.o(RESET)
+    IntDefaultHandler                        0x00000285   Thumb Code     0  startup_rvmdk.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000288   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000288   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0000028c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000290   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x00000290   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x00000290   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x00000298   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000298   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000298   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000298   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .emb_text                                0x0000029c   Section        6  sysctl.o(.emb_text)
+    $v0                                      0x0000029c   Number         0  sysctl.o(.emb_text)
+    .emb_text                                0x000002a4   Section       38  cpu.o(.emb_text)
+    $v0                                      0x000002a4   Number         0  cpu.o(.emb_text)
+    .text                                    0x000002ca   Section        0  strcmp.o(.text)
+    .text                                    0x000002e6   Section        0  iusefp.o(.text)
+    .text                                    0x000002e8   Section       36  init.o(.text)
+    i.AppButtonHandler                       0x0000030c   Section        0  qs-rgb.o(i.AppButtonHandler)
+    i.AppHibernateEnter                      0x000003cc   Section        0  qs-rgb.o(i.AppHibernateEnter)
+    i.AppRainbow                             0x00000448   Section        0  qs-rgb.o(i.AppRainbow)
+    i.ButtonsInit                            0x00000524   Section        0  buttons.o(i.ButtonsInit)
+    i.ButtonsPoll                            0x00000588   Section        0  buttons.o(i.ButtonsPoll)
+    i.CMD_help                               0x000005e0   Section        0  rgb_commands.o(i.CMD_help)
+    i.CMD_hib                                0x00000654   Section        0  rgb_commands.o(i.CMD_hib)
+    i.CMD_intensity                          0x00000660   Section        0  rgb_commands.o(i.CMD_intensity)
+    i.CMD_rand                               0x0000069c   Section        0  rgb_commands.o(i.CMD_rand)
+    i.CMD_rgb                                0x000006ac   Section        0  rgb_commands.o(i.CMD_rgb)
+    i.CmdLineProcess                         0x000006ec   Section        0  cmdline_1.o(i.CmdLineProcess)
+    i.ConfigureUART                          0x00000750   Section        0  qs-rgb.o(i.ConfigureUART)
+    i.GetBufferCount                         0x000007ac   Section        0  uartstdio_1.o(i.GetBufferCount)
+    GetBufferCount                           0x000007ad   Thumb Code    18  uartstdio_1.o(i.GetBufferCount)
+    i.HibernateDataGet                       0x000007be   Section        0  hibernate.o(i.HibernateDataGet)
+    i.HibernateDataSet                       0x000007e0   Section        0  hibernate.o(i.HibernateDataSet)
+    i.HibernateEnableExpClk                  0x00000818   Section        0  hibernate.o(i.HibernateEnableExpClk)
+    i.HibernateGPIORetentionEnable           0x00000830   Section        0  hibernate.o(i.HibernateGPIORetentionEnable)
+    i.HibernateIntClear                      0x0000084c   Section        0  hibernate.o(i.HibernateIntClear)
+    i.HibernateIntStatus                     0x00000864   Section        0  hibernate.o(i.HibernateIntStatus)
+    i.HibernateIsActive                      0x00000874   Section        0  hibernate.o(i.HibernateIsActive)
+    i.HibernateRTCEnable                     0x00000884   Section        0  hibernate.o(i.HibernateRTCEnable)
+    i.HibernateRTCMatchSet                   0x0000089c   Section        0  hibernate.o(i.HibernateRTCMatchSet)
+    i.HibernateRTCSet                        0x000008b0   Section        0  hibernate.o(i.HibernateRTCSet)
+    i.HibernateRequest                       0x000008e4   Section        0  hibernate.o(i.HibernateRequest)
+    i.HibernateWakeSet                       0x000008fc   Section        0  hibernate.o(i.HibernateWakeSet)
+    i.IntMasterEnable                        0x00000968   Section        0  interrupt.o(i.IntMasterEnable)
+    i.IsBufferEmpty                          0x00000976   Section        0  uartstdio_1.o(i.IsBufferEmpty)
+    IsBufferEmpty                            0x00000977   Thumb Code    16  uartstdio_1.o(i.IsBufferEmpty)
+    i.IsBufferFull                           0x00000986   Section        0  uartstdio_1.o(i.IsBufferFull)
+    IsBufferFull                             0x00000987   Thumb Code    26  uartstdio_1.o(i.IsBufferFull)
+    i.RGBColorSet                            0x000009a0   Section        0  rgb.o(i.RGBColorSet)
+    i.RGBDisable                             0x00000a30   Section        0  rgb.o(i.RGBDisable)
+    i.RGBEnable                              0x00000a8c   Section        0  rgb.o(i.RGBEnable)
+    i.RGBInit                                0x00000b38   Section        0  rgb.o(i.RGBInit)
+    i.RGBIntensitySet                        0x00000c08   Section        0  rgb.o(i.RGBIntensitySet)
+    i.SysCtlClockGet                         0x00000c1c   Section        0  sysctl.o(i.SysCtlClockGet)
+    i.SysCtlPeripheralEnable                 0x00000d80   Section        0  sysctl.o(i.SysCtlPeripheralEnable)
+    i.SysCtlResetCauseClear                  0x00000da8   Section        0  sysctl.o(i.SysCtlResetCauseClear)
+    i.SysCtlResetCauseGet                    0x00000db8   Section        0  sysctl.o(i.SysCtlResetCauseGet)
+    i.SysTickEnable                          0x00000dc4   Section        0  systick.o(i.SysTickEnable)
+    i.SysTickIntEnable                       0x00000dd2   Section        0  systick.o(i.SysTickIntEnable)
+    i.SysTickIntHandler                      0x00000de0   Section        0  qs-rgb.o(i.SysTickIntHandler)
+    i.SysTickPeriodSet                       0x00000e58   Section        0  systick.o(i.SysTickPeriodSet)
+    i.UARTClockSourceSet                     0x00000e62   Section        0  uart.o(i.UARTClockSourceSet)
+    i.UARTFlushRx                            0x00000e68   Section        0  uartstdio_1.o(i.UARTFlushRx)
+    i.UARTFlushTx                            0x00000e90   Section        0  uartstdio_1.o(i.UARTFlushTx)
+    i.UARTPeek                               0x00000ec8   Section        0  uartstdio_1.o(i.UARTPeek)
+    i.UARTPrimeTransmit                      0x00000f04   Section        0  uartstdio_1.o(i.UARTPrimeTransmit)
+    UARTPrimeTransmit                        0x00000f05   Thumb Code   108  uartstdio_1.o(i.UARTPrimeTransmit)
+    i.UARTStdioConfig                        0x00000f7c   Section        0  uartstdio_1.o(i.UARTStdioConfig)
+    i.UARTStdioIntHandler                    0x00001014   Section        0  uartstdio_1.o(i.UARTStdioIntHandler)
+    i.UARTgets                               0x0000111c   Section        0  uartstdio_1.o(i.UARTgets)
+    i.UARTprintf                             0x00001174   Section        0  uartstdio_1.o(i.UARTprintf)
+    i.UARTvprintf                            0x00001188   Section        0  uartstdio_1.o(i.UARTvprintf)
+    i.UARTwrite                              0x0000133c   Section        0  uartstdio_1.o(i.UARTwrite)
+    i.__ARM_fpclassifyf                      0x000013cc   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
+    i.__hardfp_sinf                          0x000013f4   Section        0  sinf.o(i.__hardfp_sinf)
+    i.__mathlib_flt_infnan                   0x00001584   Section        0  funder.o(i.__mathlib_flt_infnan)
+    i.__mathlib_flt_invalid                  0x0000158c   Section        0  funder.o(i.__mathlib_flt_invalid)
+    i.__mathlib_flt_underflow                0x0000159c   Section        0  funder.o(i.__mathlib_flt_underflow)
+    i.__mathlib_rredf2                       0x000015ac   Section        0  rredf.o(i.__mathlib_rredf2)
+    i.__scatterload_copy                     0x00001700   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000170e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00001710   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x00001720   Section        0  errno.o(i.__set_errno)
+    i.main                                   0x0000172c   Section        0  qs-rgb.o(i.main)
+    i.ustrtoul                               0x000019b8   Section        0  ustdlib_1.o(i.ustrtoul)
+    .constdata                               0x00001a58   Section       40  uartstdio_1.o(.constdata)
+    g_pcHex                                  0x00001a58   Data           4  uartstdio_1.o(.constdata)
+    g_ui32UARTBase                           0x00001a5c   Data          12  uartstdio_1.o(.constdata)
+    g_ui32UARTInt                            0x00001a68   Data          12  uartstdio_1.o(.constdata)
+    g_ui32UARTPeriph                         0x00001a74   Data          12  uartstdio_1.o(.constdata)
+    .constdata                               0x00001a80   Section      452  sysctl.o(.constdata)
+    g_pui32VCOFrequencies                    0x00001a80   Data           8  sysctl.o(.constdata)
+    g_pui32Xtals                             0x00001a88   Data         108  sysctl.o(.constdata)
+    g_pppui32XTALtoVCO                       0x00001af4   Data         288  sysctl.o(.constdata)
+    g_sXTALtoMEMTIM                          0x00001c14   Data          48  sysctl.o(.constdata)
+    .constdata                               0x00001c44   Section       32  rredf.o(.constdata)
+    twooverpi                                0x00001c44   Data          32  rredf.o(.constdata)
+    .conststring                             0x00001c64   Section      218  rgb_commands.o(.conststring)
+    .conststring                             0x00001d40   Section       17  uartstdio_1.o(.conststring)
+    .data                                    0x20000000   Section        3  buttons.o(.data)
+    g_ui8ButtonStates                        0x20000000   Data           1  buttons.o(.data)
+    ui8SwitchClockA                          0x20000001   Data           1  buttons.o(.data)
+    ui8SwitchClockB                          0x20000002   Data           1  buttons.o(.data)
+    .data                                    0x20000004   Section       44  qs-rgb.o(.data)
+    ui32TickCounter                          0x20000004   Data           4  qs-rgb.o(.data)
+    fPrevPos                                 0x20000008   Data           4  qs-rgb.o(.data)
+    x                                        0x2000000c   Data           4  qs-rgb.o(.data)
+    ui32HibModeEntryCount                    0x20000010   Data           4  qs-rgb.o(.data)
+    fManualColors                            0x20000014   Data          28  qs-rgb.o(.data)
+    .data                                    0x20000030   Section        8  rgb.o(.data)
+    g_fIntensity                             0x20000030   Data           4  rgb.o(.data)
+    ulFlags                                  0x20000034   Data           4  rgb.o(.data)
+    .data                                    0x20000038   Section       72  rgb_commands.o(.data)
+    .data                                    0x20000080   Section       28  uartstdio_1.o(.data)
+    bLastWasCR                               0x20000080   Data           1  uartstdio_1.o(.data)
+    g_bDisableEcho                           0x20000081   Data           1  uartstdio_1.o(.data)
+    g_ui32UARTTxWriteIndex                   0x20000084   Data           4  uartstdio_1.o(.data)
+    g_ui32UARTTxReadIndex                    0x20000088   Data           4  uartstdio_1.o(.data)
+    g_ui32UARTRxWriteIndex                   0x2000008c   Data           4  uartstdio_1.o(.data)
+    g_ui32UARTRxReadIndex                    0x20000090   Data           4  uartstdio_1.o(.data)
+    g_ui32Base                               0x20000094   Data           4  uartstdio_1.o(.data)
+    g_ui32PortNum                            0x20000098   Data           4  uartstdio_1.o(.data)
+    .data                                    0x2000009c   Section        4  errno.o(.data)
+    _errno                                   0x2000009c   Data           4  errno.o(.data)
+    .bss                                     0x200000a0   Section      164  qs-rgb.o(.bss)
+    g_cInput                                 0x200000a0   Data         128  qs-rgb.o(.bss)
+    .bss                                     0x20000144   Section       12  rgb.o(.bss)
+    g_ui32Colors                             0x20000144   Data          12  rgb.o(.bss)
+    .bss                                     0x20000150   Section       36  cmdline_1.o(.bss)
+    g_ppcArgv                                0x20000150   Data          36  cmdline_1.o(.bss)
+    .bss                                     0x20000174   Section     1152  uartstdio_1.o(.bss)
+    g_pcUARTTxBuffer                         0x20000174   Data        1024  uartstdio_1.o(.bss)
+    g_pcUARTRxBuffer                         0x20000574   Data         128  uartstdio_1.o(.bss)
+    STACK                                    0x200005f8   Section     2048  startup_rvmdk.o(STACK)
+    StackMem                                 0x200005f8   Data           0  startup_rvmdk.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$IEEEX$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  qs-rgb.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup_rvmdk.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup_rvmdk.o(RESET)
+    __main                                   0x00000289   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000289   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000291   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000291   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x00000291   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x00000291   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000299   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000299   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    SysCtlDelay                              0x0000029d   Thumb Code     6  sysctl.o(.emb_text)
+    CPUcpsid                                 0x000002a5   Thumb Code     8  cpu.o(.emb_text)
+    CPUprimask                               0x000002ad   Thumb Code     6  cpu.o(.emb_text)
+    CPUcpsie                                 0x000002b3   Thumb Code     8  cpu.o(.emb_text)
+    CPUwfi                                   0x000002bb   Thumb Code     4  cpu.o(.emb_text)
+    CPUbasepriSet                            0x000002bf   Thumb Code     6  cpu.o(.emb_text)
+    CPUbasepriGet                            0x000002c5   Thumb Code     6  cpu.o(.emb_text)
+    strcmp                                   0x000002cb   Thumb Code    28  strcmp.o(.text)
+    __I$use$fp                               0x000002e7   Thumb Code     0  iusefp.o(.text)
+    __scatterload                            0x000002e9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002e9   Thumb Code     0  init.o(.text)
+    AppButtonHandler                         0x0000030d   Thumb Code   178  qs-rgb.o(i.AppButtonHandler)
+    AppHibernateEnter                        0x000003cd   Thumb Code    94  qs-rgb.o(i.AppHibernateEnter)
+    AppRainbow                               0x00000449   Thumb Code   196  qs-rgb.o(i.AppRainbow)
+    ButtonsInit                              0x00000525   Thumb Code    78  buttons.o(i.ButtonsInit)
+    ButtonsPoll                              0x00000589   Thumb Code    78  buttons.o(i.ButtonsPoll)
+    CMD_help                                 0x000005e1   Thumb Code    50  rgb_commands.o(i.CMD_help)
+    CMD_hib                                  0x00000655   Thumb Code    10  rgb_commands.o(i.CMD_hib)
+    CMD_intensity                            0x00000661   Thumb Code    50  rgb_commands.o(i.CMD_intensity)
+    CMD_rand                                 0x0000069d   Thumb Code    10  rgb_commands.o(i.CMD_rand)
+    CMD_rgb                                  0x000006ad   Thumb Code    58  rgb_commands.o(i.CMD_rgb)
+    CmdLineProcess                           0x000006ed   Thumb Code    90  cmdline_1.o(i.CmdLineProcess)
+    ConfigureUART                            0x00000751   Thumb Code    76  qs-rgb.o(i.ConfigureUART)
+    HibernateDataGet                         0x000007bf   Thumb Code    32  hibernate.o(i.HibernateDataGet)
+    HibernateDataSet                         0x000007e1   Thumb Code    50  hibernate.o(i.HibernateDataSet)
+    HibernateEnableExpClk                    0x00000819   Thumb Code    20  hibernate.o(i.HibernateEnableExpClk)
+    HibernateGPIORetentionEnable             0x00000831   Thumb Code    24  hibernate.o(i.HibernateGPIORetentionEnable)
+    HibernateIntClear                        0x0000084d   Thumb Code    18  hibernate.o(i.HibernateIntClear)
+    HibernateIntStatus                       0x00000865   Thumb Code    12  hibernate.o(i.HibernateIntStatus)
+    HibernateIsActive                        0x00000875   Thumb Code    10  hibernate.o(i.HibernateIsActive)
+    HibernateRTCEnable                       0x00000885   Thumb Code    20  hibernate.o(i.HibernateRTCEnable)
+    HibernateRTCMatchSet                     0x0000089d   Thumb Code    14  hibernate.o(i.HibernateRTCMatchSet)
+    HibernateRTCSet                          0x000008b1   Thumb Code    42  hibernate.o(i.HibernateRTCSet)
+    HibernateRequest                         0x000008e5   Thumb Code    20  hibernate.o(i.HibernateRequest)
+    HibernateWakeSet                         0x000008fd   Thumb Code    96  hibernate.o(i.HibernateWakeSet)
+    IntMasterEnable                          0x00000969   Thumb Code    14  interrupt.o(i.IntMasterEnable)
+    RGBColorSet                              0x000009a1   Thumb Code   126  rgb.o(i.RGBColorSet)
+    RGBDisable                               0x00000a31   Thumb Code    78  rgb.o(i.RGBDisable)
+    RGBEnable                                0x00000a8d   Thumb Code   146  rgb.o(i.RGBEnable)
+    RGBInit                                  0x00000b39   Thumb Code   180  rgb.o(i.RGBInit)
+    RGBIntensitySet                          0x00000c09   Thumb Code    12  rgb.o(i.RGBIntensitySet)
+    SysCtlClockGet                           0x00000c1d   Thumb Code   314  sysctl.o(i.SysCtlClockGet)
+    SysCtlPeripheralEnable                   0x00000d81   Thumb Code    36  sysctl.o(i.SysCtlPeripheralEnable)
+    SysCtlResetCauseClear                    0x00000da9   Thumb Code    12  sysctl.o(i.SysCtlResetCauseClear)
+    SysCtlResetCauseGet                      0x00000db9   Thumb Code     6  sysctl.o(i.SysCtlResetCauseGet)
+    SysTickEnable                            0x00000dc5   Thumb Code    14  systick.o(i.SysTickEnable)
+    SysTickIntEnable                         0x00000dd3   Thumb Code    14  systick.o(i.SysTickIntEnable)
+    SysTickIntHandler                        0x00000de1   Thumb Code    96  qs-rgb.o(i.SysTickIntHandler)
+    SysTickPeriodSet                         0x00000e59   Thumb Code    10  systick.o(i.SysTickPeriodSet)
+    UARTClockSourceSet                       0x00000e63   Thumb Code     6  uart.o(i.UARTClockSourceSet)
+    UARTFlushRx                              0x00000e69   Thumb Code    36  uartstdio_1.o(i.UARTFlushRx)
+    UARTFlushTx                              0x00000e91   Thumb Code    52  uartstdio_1.o(i.UARTFlushTx)
+    UARTPeek                                 0x00000ec9   Thumb Code    52  uartstdio_1.o(i.UARTPeek)
+    UARTStdioConfig                          0x00000f7d   Thumb Code   142  uartstdio_1.o(i.UARTStdioConfig)
+    UARTStdioIntHandler                      0x00001015   Thumb Code   248  uartstdio_1.o(i.UARTStdioIntHandler)
+    UARTgets                                 0x0000111d   Thumb Code    78  uartstdio_1.o(i.UARTgets)
+    UARTprintf                               0x00001175   Thumb Code    18  uartstdio_1.o(i.UARTprintf)
+    UARTvprintf                              0x00001189   Thumb Code   420  uartstdio_1.o(i.UARTvprintf)
+    UARTwrite                                0x0000133d   Thumb Code   134  uartstdio_1.o(i.UARTwrite)
+    __ARM_fpclassifyf                        0x000013cd   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
+    __hardfp_sinf                            0x000013f5   Thumb Code   344  sinf.o(i.__hardfp_sinf)
+    __mathlib_flt_infnan                     0x00001585   Thumb Code     6  funder.o(i.__mathlib_flt_infnan)
+    __mathlib_flt_invalid                    0x0000158d   Thumb Code    10  funder.o(i.__mathlib_flt_invalid)
+    __mathlib_flt_underflow                  0x0000159d   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
+    __mathlib_rredf2                         0x000015ad   Thumb Code   316  rredf.o(i.__mathlib_rredf2)
+    __scatterload_copy                       0x00001701   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000170f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00001711   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x00001721   Thumb Code     6  errno.o(i.__set_errno)
+    main                                     0x0000172d   Thumb Code   344  qs-rgb.o(i.main)
+    ustrtoul                                 0x000019b9   Thumb Code   158  ustdlib_1.o(i.ustrtoul)
+    Region$$Table$$Base                      0x00001d54   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00001d74   Number         0  anon$$obj.o(Region$$Table)
+    g_psCmdTable                             0x20000038   Data          72  rgb_commands.o(.data)
+    g_sAppState                              0x20000120   Data          36  qs-rgb.o(.bss)
+    __initial_sp                             0x20000df8   Data           0  startup_rvmdk.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_IROM (Base: 0x00000000, Size: 0x00001e14, Max: 0x00040000, ABSOLUTE)
+
+    Execution Region ER_IROM (Base: 0x00000000, Size: 0x00001d74, Max: 0x00040000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000288   Code   RO          273  * RESET               startup_rvmdk.o
+    0x00000288   0x00000000   Code   RO         1697  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000288   0x00000004   Code   RO         1723    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0000028c   0x00000004   Code   RO         1726    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000290   0x00000000   Code   RO         1728    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000290   0x00000000   Code   RO         1730    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000290   0x00000008   Code   RO         1731    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000298   0x00000000   Code   RO         1733    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000298   0x00000000   Code   RO         1735    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000298   0x00000004   Code   RO         1724    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000029c   0x00000006   Code   RO          981    .emb_text           driverlib.lib(sysctl.o)
+    0x000002a2   0x00000002   PAD
+    0x000002a4   0x00000026   Code   RO         1675    .emb_text           driverlib.lib(cpu.o)
+    0x000002ca   0x0000001c   Code   RO         1700    .text               mc_w.l(strcmp.o)
+    0x000002e6   0x00000000   Code   RO         1746    .text               mc_w.l(iusefp.o)
+    0x000002e6   0x00000002   PAD
+    0x000002e8   0x00000024   Code   RO         1747    .text               mc_w.l(init.o)
+    0x0000030c   0x000000c0   Code   RO           56    i.AppButtonHandler  qs-rgb.o
+    0x000003cc   0x0000007c   Code   RO           57    i.AppHibernateEnter  qs-rgb.o
+    0x00000448   0x000000dc   Code   RO           58    i.AppRainbow        qs-rgb.o
+    0x00000524   0x00000064   Code   RO            1    i.ButtonsInit       buttons.o
+    0x00000588   0x00000058   Code   RO            2    i.ButtonsPoll       buttons.o
+    0x000005e0   0x00000074   Code   RO          221    i.CMD_help          rgb_commands.o
+    0x00000654   0x0000000a   Code   RO          222    i.CMD_hib           rgb_commands.o
+    0x0000065e   0x00000002   PAD
+    0x00000660   0x0000003c   Code   RO          223    i.CMD_intensity     rgb_commands.o
+    0x0000069c   0x00000010   Code   RO          224    i.CMD_rand          rgb_commands.o
+    0x000006ac   0x00000040   Code   RO          225    i.CMD_rgb           rgb_commands.o
+    0x000006ec   0x00000064   Code   RO          278    i.CmdLineProcess    cmdline_1.o
+    0x00000750   0x0000005c   Code   RO           59    i.ConfigureUART     qs-rgb.o
+    0x000007ac   0x00000012   Code   RO          299    i.GetBufferCount    uartstdio_1.o
+    0x000007be   0x00000020   Code   RO          532    i.HibernateDataGet  driverlib.lib(hibernate.o)
+    0x000007de   0x00000002   PAD
+    0x000007e0   0x00000038   Code   RO          533    i.HibernateDataSet  driverlib.lib(hibernate.o)
+    0x00000818   0x00000018   Code   RO          535    i.HibernateEnableExpClk  driverlib.lib(hibernate.o)
+    0x00000830   0x0000001c   Code   RO          537    i.HibernateGPIORetentionEnable  driverlib.lib(hibernate.o)
+    0x0000084c   0x00000018   Code   RO          539    i.HibernateIntClear  driverlib.lib(hibernate.o)
+    0x00000864   0x00000010   Code   RO          543    i.HibernateIntStatus  driverlib.lib(hibernate.o)
+    0x00000874   0x00000010   Code   RO          545    i.HibernateIsActive  driverlib.lib(hibernate.o)
+    0x00000884   0x00000018   Code   RO          549    i.HibernateRTCEnable  driverlib.lib(hibernate.o)
+    0x0000089c   0x00000014   Code   RO          552    i.HibernateRTCMatchSet  driverlib.lib(hibernate.o)
+    0x000008b0   0x00000034   Code   RO          556    i.HibernateRTCSet   driverlib.lib(hibernate.o)
+    0x000008e4   0x00000018   Code   RO          559    i.HibernateRequest  driverlib.lib(hibernate.o)
+    0x000008fc   0x0000006c   Code   RO          574    i.HibernateWakeSet  driverlib.lib(hibernate.o)
+    0x00000968   0x0000000e   Code   RO          869    i.IntMasterEnable   driverlib.lib(interrupt.o)
+    0x00000976   0x00000010   Code   RO          300    i.IsBufferEmpty     uartstdio_1.o
+    0x00000986   0x0000001a   Code   RO          301    i.IsBufferFull      uartstdio_1.o
+    0x000009a0   0x00000090   Code   RO          149    i.RGBColorSet       rgb.o
+    0x00000a30   0x0000005c   Code   RO          150    i.RGBDisable        rgb.o
+    0x00000a8c   0x000000ac   Code   RO          151    i.RGBEnable         rgb.o
+    0x00000b38   0x000000d0   Code   RO          152    i.RGBInit           rgb.o
+    0x00000c08   0x00000014   Code   RO          153    i.RGBIntensitySet   rgb.o
+    0x00000c1c   0x00000164   Code   RO          984    i.SysCtlClockGet    driverlib.lib(sysctl.o)
+    0x00000d80   0x00000028   Code   RO         1015    i.SysCtlPeripheralEnable  driverlib.lib(sysctl.o)
+    0x00000da8   0x00000010   Code   RO         1026    i.SysCtlResetCauseClear  driverlib.lib(sysctl.o)
+    0x00000db8   0x0000000c   Code   RO         1027    i.SysCtlResetCauseGet  driverlib.lib(sysctl.o)
+    0x00000dc4   0x0000000e   Code   RO         1321    i.SysTickEnable     driverlib.lib(systick.o)
+    0x00000dd2   0x0000000e   Code   RO         1323    i.SysTickIntEnable  driverlib.lib(systick.o)
+    0x00000de0   0x00000078   Code   RO           60    i.SysTickIntHandler  qs-rgb.o
+    0x00000e58   0x0000000a   Code   RO         1327    i.SysTickPeriodSet  driverlib.lib(systick.o)
+    0x00000e62   0x00000006   Code   RO         1395    i.UARTClockSourceSet  driverlib.lib(uart.o)
+    0x00000e68   0x00000028   Code   RO          303    i.UARTFlushRx       uartstdio_1.o
+    0x00000e90   0x00000038   Code   RO          304    i.UARTFlushTx       uartstdio_1.o
+    0x00000ec8   0x0000003c   Code   RO          305    i.UARTPeek          uartstdio_1.o
+    0x00000f04   0x00000078   Code   RO          306    i.UARTPrimeTransmit  uartstdio_1.o
+    0x00000f7c   0x00000098   Code   RO          308    i.UARTStdioConfig   uartstdio_1.o
+    0x00001014   0x00000108   Code   RO          309    i.UARTStdioIntHandler  uartstdio_1.o
+    0x0000111c   0x00000058   Code   RO          312    i.UARTgets          uartstdio_1.o
+    0x00001174   0x00000012   Code   RO          313    i.UARTprintf        uartstdio_1.o
+    0x00001186   0x00000002   PAD
+    0x00001188   0x000001b4   Code   RO          314    i.UARTvprintf       uartstdio_1.o
+    0x0000133c   0x00000090   Code   RO          315    i.UARTwrite         uartstdio_1.o
+    0x000013cc   0x00000026   Code   RO         1704    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
+    0x000013f2   0x00000002   PAD
+    0x000013f4   0x00000190   Code   RO         1685    i.__hardfp_sinf     m_wm.l(sinf.o)
+    0x00001584   0x00000006   Code   RO         1707    i.__mathlib_flt_infnan  m_wm.l(funder.o)
+    0x0000158a   0x00000002   PAD
+    0x0000158c   0x00000010   Code   RO         1709    i.__mathlib_flt_invalid  m_wm.l(funder.o)
+    0x0000159c   0x00000010   Code   RO         1712    i.__mathlib_flt_underflow  m_wm.l(funder.o)
+    0x000015ac   0x00000154   Code   RO         1720    i.__mathlib_rredf2  m_wm.l(rredf.o)
+    0x00001700   0x0000000e   Code   RO         1751    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000170e   0x00000002   Code   RO         1752    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00001710   0x0000000e   Code   RO         1753    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0000171e   0x00000002   PAD
+    0x00001720   0x0000000c   Code   RO         1741    i.__set_errno       mc_w.l(errno.o)
+    0x0000172c   0x0000028c   Code   RO           61    i.main              qs-rgb.o
+    0x000019b8   0x0000009e   Code   RO          429    i.ustrtoul          ustdlib_1.o
+    0x00001a56   0x00000002   PAD
+    0x00001a58   0x00000028   Data   RO          317    .constdata          uartstdio_1.o
+    0x00001a80   0x000001c4   Data   RO         1036    .constdata          driverlib.lib(sysctl.o)
+    0x00001c44   0x00000020   Data   RO         1721    .constdata          m_wm.l(rredf.o)
+    0x00001c64   0x000000da   Data   RO          226    .conststring        rgb_commands.o
+    0x00001d3e   0x00000002   PAD
+    0x00001d40   0x00000011   Data   RO          318    .conststring        uartstdio_1.o
+    0x00001d51   0x00000003   PAD
+    0x00001d54   0x00000020   Data   RO         1749    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM (Base: 0x20000000, Size: 0x00000df8, Max: 0x00008000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000003   Data   RW            3    .data               buttons.o
+    0x20000003   0x00000001   PAD
+    0x20000004   0x0000002c   Data   RW           63    .data               qs-rgb.o
+    0x20000030   0x00000008   Data   RW          156    .data               rgb.o
+    0x20000038   0x00000048   Data   RW          227    .data               rgb_commands.o
+    0x20000080   0x0000001c   Data   RW          319    .data               uartstdio_1.o
+    0x2000009c   0x00000004   Data   RW         1742    .data               mc_w.l(errno.o)
+    0x200000a0   0x000000a4   Zero   RW           62    .bss                qs-rgb.o
+    0x20000144   0x0000000c   Zero   RW          155    .bss                rgb.o
+    0x20000150   0x00000024   Zero   RW          279    .bss                cmdline_1.o
+    0x20000174   0x00000480   Zero   RW          316    .bss                uartstdio_1.o
+    0x200005f4   0x00000004   PAD
+    0x200005f8   0x00000800   Zero   RW          271    STACK               startup_rvmdk.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       188         32          0          3          0       6580   buttons.o
+       100         10          0          0         36       2060   cmdline_1.o
+      1400        416          0         44        164       7613   qs-rgb.o
+       636         94          0          8         12       4156   rgb.o
+       266         88        218         72          0       4237   rgb_commands.o
+       648        622          0          0       2048        280   startup_rvmdk.o
+      1438         90         57         28       1152      12073   uartstdio_1.o
+       158          0          0          0          0       1107   ustdlib_1.o
+
+    ----------------------------------------------------------------------
+      4840       1352        312        156       3416      38106   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         6          0          5          1          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        38          0          0          0          0        532   cpu.o
+       424         66          0          0          0       7201   hibernate.o
+        14          0          0          0          0        478   interrupt.o
+       430         56        452          0          0       4380   sysctl.o
+        38          0          0          0          0       1314   systick.o
+         6          0          0          0          0        501   uart.o
+        38          0          0          0          0        116   fpclassifyf.o
+        38         12          0          0          0        348   funder.o
+       340         24         32          0          0        160   rredf.o
+       400         56          0          0          0        212   sinf.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        12          6          0          4          0         68   errno.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        28          0          0          0          0         76   strcmp.o
+
+    ----------------------------------------------------------------------
+      1904        236        484          4          0      15454   Library Totals
+        12          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       950        122        452          0          0      14406   driverlib.lib
+       816         92         32          0          0        836   m_wm.l
+       126         22          0          4          0        212   mc_w.l
+
+    ----------------------------------------------------------------------
+      1904        236        484          4          0      15454   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6744       1588        796        160       3416      48364   Grand Totals
+      6744       1588        796        160       3416      48364   ELF Image Totals
+      6744       1588        796        160          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 7540 (   7.36kB)
+    Total RW  Size (RW Data + ZI Data)              3576 (   3.49kB)
+    Total ROM Size (Code + RO Data + RW Data)       7700 (   7.52kB)
+
+==============================================================================
+
